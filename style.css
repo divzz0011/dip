@@ -1,0 +1,264 @@
+/* RESET */
+* {
+  margin: 0; /* Hilangkan margin default */
+  padding: 0; /* Hilangkan padding default */
+  box-sizing: border-box; /* Menghitung padding dan border dalam ukuran elemen */
+  font-family: 'Courier New', monospace; /* Font monospace */
+  scroll-behavior: smooth; /* Scroll halus saat navigasi */
+}
+
+body {
+  background: #0a0f0d; /* Background gelap */
+  color: #e0e0e0; /* Warna teks terang */
+}
+
+/* HEADER */
+header {
+  background: rgba(0,0,0,0.8); /* Background hitam transparan */
+  padding: 15px 20px; /* Jarak dalam */
+  position: fixed; /* Header tetap di atas saat scroll */
+  width: 100%; /* Lebar penuh */
+  z-index: 999; /* Agar di atas elemen lain */
+  top: 0; /* Posisi di atas */
+}
+
+nav {
+  display: flex; /* Gunakan flexbox */
+  justify-content: space-between; /* Spasi antar elemen */
+  align-items: center; /* Rata tengah vertikal */
+}
+
+.logo {
+  font-size: 1.5em; /* Ukuran font logo */
+  font-weight: bold; /* Tebal */
+  color: #00ff99; /* Warna hijau neon */
+}
+
+.logo span {
+  color: #00ccff; /* Warna biru neon untuk bagian span */
+}
+
+nav ul {
+  list-style: none; /* Hilangkan bullet */
+  display: flex; /* Horizontal */
+  gap: 20px; /* Jarak antar menu */
+}
+
+nav a {
+  text-decoration: none; /* Hilangkan garis bawah */
+  color: white; /* Warna putih */
+  transition: 0.3s; /* Animasi saat hover */
+}
+
+nav a:hover {
+  color: #00ff99; /* Warna hijau saat hover */
+  text-shadow: 0 0 10px #00ff99; /* Efek glow */
+}
+
+/* HERO */
+.hero {
+  height: 100vh; /* Tinggi sama dengan viewport */
+  background: url('https://source.unsplash.com/1600x900/?programming,code') center/cover no-repeat; /* Background gambar */
+  display: flex; /* Flexbox */
+  align-items: center; /* Tengah vertikal */
+  justify-content: center; /* Tengah horizontal */
+  text-align: center; /* Teks rata tengah */
+  padding-top: 60px; /* Jarak atas untuk header */
+}
+
+.hero-text h1 {
+  font-size: 2.5em; /* Ukuran besar */
+  color: #00ff99; /* Warna hijau neon */
+  text-shadow: 0 0 20px #00ff99; /* Glow */
+}
+
+.hero-text p {
+  margin: 10px 0; /* Jarak vertikal */
+}
+
+.btn {
+  background: #00ff99; /* Background hijau */
+  color: #0a0f0d; /* Warna teks gelap */
+  padding: 10px 20px; /* Jarak dalam tombol */
+  text-decoration: none; /* Hilangkan garis bawah */
+  border-radius: 5px; /* Sudut bulat */
+  font-weight: bold; /* Tebal */
+  transition: 0.3s; /* Animasi transisi */
+}
+
+.btn:hover {
+  background: #00ccff; /* Ganti warna saat hover */
+  box-shadow: 0 0 15px #00ccff; /* Glow saat hover */
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 20px; /* Jarak dalam */
+  max-width: 1000px; /* Maksimal lebar */
+  margin: auto; /* Tengah horizontal */
+}
+
+/* SERVICES */
+.service-container {
+  display: flex; /* Flexbox */
+  flex-wrap: wrap; /* Bisa pindah baris */
+  gap: 20px; /* Jarak antar kartu */
+  justify-content: center; /* Tengah */
+}
+
+.service-card {
+  background: #111; /* Background gelap */
+  padding: 20px; /* Jarak dalam */
+  border-radius: 10px; /* Sudut bulat */
+  width: 250px; /* Lebar kartu */
+  text-align: center; /* Teks rata tengah */
+  border: 1px solid #00ff99; /* Border hijau neon */
+  transition: transform 0.3s, box-shadow 0.3s; /* Animasi hover */
+}
+
+.service-card:hover {
+  transform: scale(1.05); /* Perbesar saat hover */
+  box-shadow: 0 0 20px #00ff99; /* Glow saat hover */
+}
+
+/* CONTACT */
+input, textarea {
+  width: 100%; /* Lebar penuh */
+  padding: 10px; /* Jarak dalam */
+  margin: 10px 0; /* Jarak vertikal */
+  background: #111; /* Background gelap */
+  border: 1px solid #00ff99; /* Border hijau */
+  color: white; /* Teks putih */
+}
+
+.btn-wa {
+  display: inline-block;
+  background: #25D366; /* Hijau khas WhatsApp */
+  padding: 10px 20px; /* Jarak dalam */
+  color: white; /* Teks putih */
+  text-decoration: none; /* Hilangkan garis bawah */
+  border-radius: 5px; /* Sudut bulat */
+  margin-top: 10px; /* Jarak atas */
+}
+
+/* FOOTER */
+footer {
+  background: #000; /* Hitam */
+  padding: 15px; /* Jarak dalam */
+  text-align: center; /* Teks rata tengah */
+  color: #888; /* Warna abu */
+}
+
+/* ANIMATIONS */
+.fade-in {
+  opacity: 0; /* Transparan */
+  transform: translateY(20px); /* Geser ke bawah */
+  transition: all 1s ease; /* Animasi */
+}
+
+.fade-in.show {
+  opacity: 1; /* Muncul */
+  transform: translateY(0); /* Kembali posisi semula */
+}
+
+/* Typing Effect */
+#typing {
+  font-size: 2.5em; /* Ukuran besar */
+  color: #00ff99; /* Hijau neon */
+  text-shadow: 0 0 20px #00ff99; /* Glow */
+  white-space: nowrap; /* Jangan pindah baris */
+  overflow: hidden; /* Sembunyikan overflow */
+  border-right: 3px solid #00ff99; /* Kursor ketikan */
+  animation: blink 0.8s infinite; /* Kursor berkedip */
+}
+
+@keyframes blink {
+  50% { border-color: transparent; } /* Efek berkedip */
+}
+
+/* POPUP */
+.popup {
+  display: none !important; /* Default sembunyi */
+  position: fixed; /* Posisi tetap */
+  z-index: 1000; /* Di atas semua */
+  padding-top: 100px; /* Jarak atas */
+  left: 0;
+  top: 0;
+  width: 100%; /* Lebar penuh */
+  height: 100%; /* Tinggi penuh */
+  background: rgba(0,0,0,0.7); /* Latar hitam transparan */
+  animation: fadeIn 0.5s ease; /* Animasi muncul */
+}
+
+.popup-content {
+  background: #111; /* Background popup */
+  margin: auto; /* Tengah */
+  padding: 20px; /* Jarak dalam */
+  border: 2px solid #00ff99; /* Border hijau */
+  width: 300px; /* Lebar popup */
+  border-radius: 10px; /* Sudut bulat */
+  text-align: center; /* Teks tengah */
+  box-shadow: 0 0 20px #00ff99; /* Glow */
+  animation: slideUp 0.5s ease; /* Animasi naik */
+}
+
+.popup .close {
+  float: right; /* Posisi kanan */
+  font-size: 20px; /* Ukuran font */
+  cursor: pointer; /* Pointer saat hover */
+  color: #fff; /* Warna putih */
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideUp {
+  from {transform: translateY(50px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+/* Hamburger menu style */
+.menu-toggle {
+  display: none; /* Default sembunyi */
+  font-size: 1.8em; /* Ukuran */
+  color: white; /* Warna putih */
+  cursor: pointer; /* Pointer */
+}
+
+/* Responsive - saat layar kecil */
+@media (max-width: 768px) {
+  nav ul {
+      display: none; /* Sembunyikan menu utama */
+      flex-direction: column; /* Menu vertikal */
+      position: absolute; /* Posisi absolut */
+      top: 60px; /* Bawah header */
+      right: 20px; /* Sebelah kanan */
+      background: rgba(0,0,0,0.9); /* Background hitam transparan */
+      width: 200px; /* Lebar menu */
+      padding: 10px; /* Jarak dalam */
+      border-radius: 8px; /* Sudut bulat */
+  }
+
+  nav ul.show {
+      display: flex; /* Tampilkan saat toggle */
+  }
+
+  .menu-toggle {
+      display: block; /* Tampilkan hamburger */
+  }
+}
+
+/* Responsive Popup Fix untuk layar kecil */
+@media (max-width: 480px) {
+  .popup-content {
+      width: 90%; /* Lebar popup lebih kecil */
+      padding: 15px;
+  }
+
+  #typing {
+      font-size: 1.8em; /* Font lebih kecil */
+      white-space: normal; /* Boleh pindah baris */
+  }
+}

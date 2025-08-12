@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <!-- Metadata halaman -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jasa Programmer Profesional</title>
+  <!-- Link ke file CSS eksternal -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Popup yang muncul di halaman -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close">&times;</span> <!-- Tombol tutup popup -->
+      <h2>💻 Selamat Datang!</h2>
+      <p>Kami dapat mengubah ide Anda menjadi sesuatu yang ajaib.</p>
+      <a href="#contact" class="btn">Pesan Sekarang</a>
+    </div>
+  </div>
+
+  <!-- Bagian header dan navigasi -->
+  <header>
+    <nav>
+      <div class="logo">Divzz<span>Dev</span></div> <!-- Logo situs -->
+      <div class="menu-toggle" id="menu-toggle">☰</div> <!-- Tombol menu untuk mobile -->
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#services">Layanan</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Section utama halaman: Hero dengan teks dan tombol -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1 id="typing"></h1> <!-- Efek ketikan teks akan muncul di sini -->
+      <p>Kami mengubah ide Anda menjadi produk digital yang menakjubkan.</p>
+      <a href="#services" class="btn">Lihat Layanan</a>
+    </div>
+  </section>
+
+  <!-- Section Tentang Kami -->
+  <section id="about" class="fade-in">
+    <h2>Tentang Kami</h2>
+    <p>Tim developer profesional yang berpengalaman dalam membuat website, aplikasi mobile, dan game 2d berbasis web atau lainnya.</p>
+  </section>
+
+  <!-- Section Layanan -->
+  <section id="services" class="fade-in">
+    <h2>Layanan Kami</h2>
+    <div class="service-container">
+      <div class="service-card">
+        <h3>Web Development</h3>
+        <p>Membangun website responsif & modern.</p>
+      </div>
+      <div class="service-card">
+        <h3>Mobile App</h3>
+        <p>Aplikasi Android & iOS dengan performa tinggi.</p>
+      </div>
+      <div class="service-card">
+        <h3>Game Dev</h3>
+        <p>Membuat sebuah game dengan model 2d dan berbasis web atau lainnya.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Kontak dengan form dan tautan WhatsApp -->
+  <section id="contact" class="fade-in">
+    <h2>Hubungi Kami</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Nama" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Pesan Anda" required></textarea>
+      <button type="submit" class="btn">Kirim</button>
+    </form>
+    <a href="https://wa.me/6281818160725" class="btn-wa" target="_blank" rel="noopener noreferrer">
+      💬 Chat via WhatsApp
+    </a>
+  </section>
+
+  <!-- Footer sederhana -->
+  <footer>
+    <p>&copy; 2025 DivzzDev. Thanks.</p>
+  </footer>
+
+  <!-- Link ke file JavaScript eksternal -->
+  <script src="script.js"></script>
+</body>
+</html>
